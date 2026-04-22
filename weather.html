@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Weather NG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body class="bg-[#05051e] text-white p-6 font-sans">
+
+    <div class="max-w-md mx-auto space-y-6">
+        
+        <div class="h-16 flex items-center justify-center text-center">
+            <h2 class="text-2xl font-bold">
+                <span id="typing-text"></span><span class="cursor"></span>
+            </h2>
+        </div>
+
+        <div class="flex gap-2">
+            <input id="city" type="text" placeholder="City name..." class="bg-[#1a1a3a] p-3 rounded-lg flex-1 outline-none">
+            <button onclick="getWeather()" class="bg-indigo-600 px-4 rounded-lg">Go</button>
+        </div>
+
+        <div class="bg-indigo-700 p-8 rounded-3xl text-center shadow-2xl">
+            <h1 id="out-city" class="text-2xl font-bold">Lagos, Nigeria</h1>
+            <p id="out-temp" class="text-7xl font-bold my-4">--°</p>
+            <p id="out-desc" class="opacity-80 text-indigo-200">Loading weather...</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+            <div class="bg-[#1a1a3a] p-4 rounded-2xl text-center border border-white/5">
+                <p class="text-xs opacity-50 uppercase">Humidity</p>
+                <p id="out-hum" class="text-xl font-bold text-indigo-400">--</p>
+            </div>
+            <div class="bg-[#1a1a3a] p-4 rounded-2xl text-center border border-white/5">
+                <p class="text-xs opacity-50 uppercase">Wind Speed</p>
+                <p id="out-wind" class="text-xl font-bold text-indigo-400">--</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+</html>
